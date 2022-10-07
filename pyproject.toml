@@ -11,13 +11,12 @@ keywords = ["website", "discord"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-fastapi = "^0.85.0"
 ffmpeg-python = "^0.2.0"
 discord-webhook = "^0.17.0"
-python-multipart = "^0.0.5"
 python-dotenv = "^0.21.0"
-Jinja2 = "^3.1.2"
-uvicorn = {extras = ["standard"], version = "^0.18.3"}
+Django = "^4.1.1"
+django-allauth = "^0.51.0"
+Pillow = "^9.2.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
