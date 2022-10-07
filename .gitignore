@@ -131,3 +131,6 @@ dmypy.json
 Uploads/
 uploads/test.mp4.jpg
 uploads/test_video.mp4.html
+
+# Where we store our uploads
+media/
