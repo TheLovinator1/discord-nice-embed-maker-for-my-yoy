@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>discord-nice-embed</title>
+    <meta content="text/html; charset=utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="{% static 'discord_embed/style.css' %}" rel="stylesheet"/>
+</head>
+<body>
+<a href="{% url 'admin:index' %}">admin</a> -
+<a href="{% url 'account_logout' %}">sign out</a> -
+<a href="{% url 'account_email' %}">email</a> -
+<a href="{% url 'socialaccount_connections' %}">social</a>
+<a href="{% url 'upload_images' %}">Upload images</a>
+<a href="{% url 'upload_files' %}">Upload files</a>
+
+<div style="text-align:center">
+    <h1>Hello {{ user.username }}</h1>
+    ID: {{ user.id }} <br>
+    Email: {{ user.email }} <br>
+    Date joined: {{ user.date_joined }} <br>
+    First name: {{ user.first_name }} <br>
+    Last login: {{ user.last_login }} <br>
+    Password: {{ user.password }} <br>
+    {% for img in imgs %}
+        <img src="{{ img.image.url }}" alt="img">
+    {% endfor %}
+    <br>
+    -------------------------
+    <br>
+    {% for file in files %}
+        {{ file.name }} -
+    {% endfor %}
+</div>
+
+</body>
+</html>
